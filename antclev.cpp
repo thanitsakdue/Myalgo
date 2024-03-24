@@ -10,7 +10,7 @@ int topdown(int m, int n){
         return memo[m][n];
     }
     else{
-        return memo[m][n] = max(a[m][n] + topdown(m-1, n), a[m][n] +  topdown(m, n-1));
+        return memo[m][n] = a[m][n]+max( topdown(m-1, n),  topdown(m, n-1));
     }
 }
 
